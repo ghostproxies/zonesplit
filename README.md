@@ -19,6 +19,8 @@ ZoneSplit is an efficient algorithm for dividing parallel PRNG sequences.
 
 It's intended to provide [parallelism guarantees](README.md?tab=readme-ov-file#parallelism) for PRNGs with the added benefit of a [minimum period](README.md?tab=readme-ov-file#period), the [fastest speed](README.md?tab=readme-ov-file#speed), [decent empirical test results](README.md?tab=readme-ov-file#empirical-test-results), reversibility, [simple implementation](README.md?tab=readme-ov-file#reference) and no vendor-specific SIMD.
 
+It's implemented in [BlastCircuit](https://github.com/ghostproxies/blastcircuit), [StormDrop](https://github.com/ghostproxies/stormdrop) and [WaveDrift](https://github.com/ghostproxies/wavedrift).
+
 ## Author
 
 ZoneSplit was created by [William Stafford Parsons](https://github.com/williamstaffordparsons) as a product of [GhostProxies](https://ghostproxies.com).
