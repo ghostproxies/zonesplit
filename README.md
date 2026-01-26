@@ -33,9 +33,13 @@ The default phrase `the copyright holder` in the 3rd clause is replaced with `Gh
 
 ## Period
 
-ZoneSplit has many possible deterministic sequences based on the seed.
+Instead of a full period that generates exactly 1 of each possible number predictably within a 2ⁿ space, ZoneSplit generates different seed-based deterministic sequences (of at least 2ⁿ numbers each) that have varying output number frequencies.
 
-A 2ⁿ minimum period in each sequence is proven by the mixed-in 2ⁿ equidistributed sequence.
+Varying number frequency distribution is a desirable property of a PRNG that deterministically mimics unpredictable true randomness where generating exactly 1 of each possible number within a 2ⁿ space is both anomalous and a predictability factor that increases as the remaining space within a full period sequence decreases.
+
+The uniformity of output number frequency increases in the scope of every possible seeded ZoneSplit sequence, meaning it can eventually generate at least 1 of each possible number within a 2ⁿ space as an accumulation of multiple 2ⁿ sequences from different seeded states.
+
+The 2ⁿ minimum period is proven by the mixed-in 2ⁿ equidistributed sequence.
 
 ⁿ is defined as `BITS_LENGTH` in the [reference](README.md?tab=readme-ov-file#reference) section.
 
