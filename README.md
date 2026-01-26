@@ -41,8 +41,6 @@ A 2ⁿ minimum period in each sequence is proven by the mixed-in 2ⁿ equidistri
 
 ZoneSplit guarantees up to 2ⁿ parallel instances that each output at least 2ⁿ results without state overlap among the set of parallel instances.
 
-Furthermore, small sequences of output overlap among a set of parallel instances escape quickly due to the [seed requirements](README.md?tab=readme-ov-file#reference) aligning to ensure occasional XOR rotation overlaps are XORed with the [2ⁿ equidistributed sequence](README.md?tab=readme-ov-file#period) at non-overlapping points.
-
 ⁿ is defined as `BITS_LENGTH` in the [reference](README.md?tab=readme-ov-file#reference) section.
 
 ## Reference
@@ -62,9 +60,13 @@ Each instance within a set of parallel PRNG instances that use ZoneSplit must se
 
 `INCREMENT` must be an odd number greater than `0` and less than `2ⁿ`.
 
-`a` must either be mixed in with the remaining state or returned.
+`a` must either be mixed into the additional state (excluding `b`) or returned.
 
-[zonesplit.c](zonesplit.c) demonstrates the aforementioned parallelism guarantees when `BITS_LENGTH` is `8`.
+Neither `a` nor `b` must be assigned a value outside of the aforementioned ZoneSplit algorithm.
+
+[zonesplit.c](zonesplit.c) demonstrates the aforementioned [parallelism guarantee](README.md?tab=readme-ov-file#parallelism) when `BITS_LENGTH` is `8`.
+
+Furthermore, small overlapping sequences of `a` escape quickly due to the [seed requirements](README.md?tab=readme-ov-file#reference) aligning to ensure occasional XOR rotation overlaps are XORed with the [2ⁿ equidistributed sequence](README.md?tab=readme-ov-file#period) at non-overlapping points.
 
 ## Empirical Test Results
 
