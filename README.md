@@ -41,7 +41,7 @@ A 2ⁿ minimum period in each sequence is proven by the mixed-in 2ⁿ equidistri
 
 ## Parallelism
 
-ZoneSplit guarantees up to 2ⁿ parallel instances that each output at least 2ⁿ results without state overlap among the set of parallel instances.
+ZoneSplit guarantees up to 2ⁿ parallel instances that each output at least 2ⁿ results without full state overlap among the set of parallel instances.
 
 ⁿ is defined as `BITS_LENGTH` in the [reference](README.md?tab=readme-ov-file#reference) section.
 
@@ -62,7 +62,7 @@ Each instance within a set of parallel PRNG instances that use ZoneSplit must se
 
 `INCREMENT` must be an odd number greater than `0` and less than `2ⁿ`.
 
-`a` must either be mixed into the additional state (excluding `b`) or returned.
+`a` must either be mixed into additional state (excluding `b`) or returned.
 
 Neither `a` nor `b` must be assigned a value outside of the aforementioned ZoneSplit algorithm.
 
