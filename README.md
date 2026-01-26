@@ -41,7 +41,7 @@ A 2ⁿ minimum period in each sequence is proven by the mixed-in 2ⁿ equidistri
 
 ## Parallelism
 
-ZoneSplit guarantees up to 2ⁿ parallel instances that each output at least 2ⁿ results without full state overlap among the set of parallel instances.
+ZoneSplit guarantees up to 2ⁿ parallel instances that each avoid collisions with other seeded states among the set of parallel instances for at least 2ⁿ output results.
 
 ⁿ is defined as `BITS_LENGTH` in the [reference](README.md?tab=readme-ov-file#reference) section.
 
