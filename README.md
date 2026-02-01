@@ -15,7 +15,7 @@
 
 ## Introduction
 
-ZoneSplit is an efficient algorithm for dividing parallel PRNG sequences.
+ZoneSplit is the efficient algorithm for dividing parallel PRNG sequences.
 
 It's intended to provide [parallelism guarantees](README.md?tab=readme-ov-file#parallelism) for PRNGs with the added benefit of a [minimum period](README.md?tab=readme-ov-file#period), the [fastest speed](README.md?tab=readme-ov-file#speed), [decent empirical test results](README.md?tab=readme-ov-file#empirical-test-results), reversibility, [simple implementation](README.md?tab=readme-ov-file#reference) and no vendor-specific SIMD.
 
